@@ -59,20 +59,20 @@ open up you local host and port
 ### dagshub
 [dagshub](https://dagshub.com/)
 
-MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow \
-MLFLOW_TRACKING_USERNAME=entbappy \
-MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 \
+MLFLOW_TRACKING_URI=https://dagshub.com/ramasaranmummidi/Kidney-Disease-Detection-using-Deep-Learning.mlflow \
+MLFLOW_TRACKING_USERNAME=ramasaranmummidi \
+MLFLOW_TRACKING_PASSWORD=ff9a10bf90595da939492bc7540ed22bbb7d96f0 \
 python script.py
 
 Run this to export as env variables:
 
 ```bash
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow
+set MLFLOW_TRACKING_URI=https://dagshub.com/ramasaranmummidi/Kidney-Disease-Detection-using-Deep-Learning.mlflow
 
-export MLFLOW_TRACKING_USERNAME=entbappy 
+set MLFLOW_TRACKING_USERNAME=ramasaranmummidi 
 
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
+set MLFLOW_TRACKING_PASSWORD=ff9a10bf90595da939492bc7540ed22bbb7d96f0
 
 ```
 
