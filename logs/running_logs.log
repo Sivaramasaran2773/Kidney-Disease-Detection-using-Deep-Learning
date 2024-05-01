@@ -218,3 +218,70 @@ Traceback (most recent call last):
   File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
     raise MlflowException(
 mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: ''
+[2024-05-01 23:37:09,056: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-01 23:37:09,058: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-01 23:37:09,060: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 23:37:09,060: INFO: common: created directory at: artifacts]
+[2024-05-01 23:37:09,061: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-01 23:37:09,061: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-01 23:38:10,086: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-01 23:38:10,940: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-01 23:38:10,940: INFO: main: *******************]
+[2024-05-01 23:38:10,941: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-05-01 23:38:10,945: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-01 23:38:10,947: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 23:38:10,948: INFO: common: created directory at: artifacts]
+[2024-05-01 23:38:10,948: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-05-01 23:38:11,735: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-05-01 23:38:12,042: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-05-01 23:38:12,042: INFO: main: *******************]
+[2024-05-01 23:38:12,042: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-05-01 23:38:12,044: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-01 23:38:12,046: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 23:38:12,048: INFO: common: created directory at: artifacts]
+[2024-05-01 23:38:12,049: INFO: common: created directory at: artifacts\training]
+[2024-05-01 23:40:14,759: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-05-01 23:40:14,759: INFO: main: *******************]
+[2024-05-01 23:40:14,760: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-05-01 23:40:14,769: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-01 23:40:14,776: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 23:40:14,777: INFO: common: created directory at: artifacts]
+[2024-05-01 23:40:34,619: INFO: common: json file saved at: scores.json]
+[2024-05-01 23:40:34,623: INFO: common: json file saved at: scores.json]
+[2024-05-01 23:40:38,111: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-05-01 23:40:38,762: INFO: builder_impl: Assets written to: C:\Users\Dell\AppData\Local\Temp\tmpaz175p7p\model\data\model\assets]
+[2024-05-01 23:41:49,872: ERROR: main: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "main.py", line 49, in <module>
+    model_evalution.main()
+  File "c:\users\dell\desktop\p1\kidney-disease-detection-using-deep-learning\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "c:\users\dell\desktop\p1\kidney-disease-detection-using-deep-learning\src\cnnClassifier\components\model_evaluation_mlflow.py", line 72, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model", registered_model_name="VGG16Model")
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 562, in log
+    mlflow.register_model(
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 77, in register_model
+    raise e
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 68, in register_model
+    create_model_response = client.create_registered_model(name)
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1743, in create_registered_model
+    return self._get_registry_client().create_registered_model(name, tags, description)
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_model_registry\client.py", line 63, in create_registered_model
+    return self.store.create_registered_model(name, tags, description)
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\store\model_registry\rest_store.py", line 75, in create_registered_model
+    response_proto = self._call_endpoint(CreateRegisteredModel, req_body)
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\store\model_registry\base_rest_store.py", line 42, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "C:\Users\Dell\anaconda3\envs\kidney\lib\site-packages\mlflow\utils\rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: ''
