@@ -1,7 +1,7 @@
 # Kidney-Disease-Detection-Classification-MLflow-DVC-AWS-Using-Deep-Learning-Models
 ### This repository consists of two main parts. In the first part, we apply deep learning to our classification task using various deep learning models to identify the best-performing model. In the second part, we focus on deploying this deep learning model to the cloud, enabling easy access for everyone. For deployment, we utilize a CI/CD pipeline and an EC2 instance server.
 
-The AWS Cloud Deployment Part was followed from Krish Naik Sir's Github Repository.
+The AWS Cloud Deployment Part was followed from [@krishnaik06](https://github.com/krishnaik06) Sir's Youtube Channel and you can find that repository here [Kidney-Disease-Classification-Deep-Learning-Project](https://github.com/krishnaik06/Kidney-Disease-Classification-Deep-Learning-Project)
 
 # Part-1: Kidney Disease Classification using Deep Learning Architectures
 You can find these code file under the folder Part-1-DeepLearningArchitectures-CNN+ResNet18+SqueezeNet
