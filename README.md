@@ -4,6 +4,7 @@
 The AWS Cloud Deployment Part was followed from Krish Naik Sir's Github Repository.
 
 # Part-1: Kidney Disease Classification using Deep Learning Architectures
+You can find these code file under the folder Part-1-DeepLearningArchitectures-CNN+ResNet18+SqueezeNet
 
 ## Dataset Overview:
 https://www.kaggle.com/datasets/nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone
@@ -45,7 +46,14 @@ Out of the 3 models which have we have Implemented, ResNet18 have achieved an hi
 ![image](https://github.com/Sivaramasaran2773/Kidney-Disease-Detection-using-Deep-Learning/assets/96780921/e3b023fa-3bc0-4f90-814a-06c853d5d066)
 
 
-# Part-2: Deployment in AWS Cloud using CI/CD Pipeline
+# Part-2: Deployment in AWS Cloud using CI/CD Pipeline in EC2
+## User Interface:
+
+![image](https://github.com/Sivaramasaran2773/Kidney-Disease-Detection-using-Deep-Learning/assets/96780921/27093667-00a7-4399-a808-cf2dbd60fb83)
+
+![image](https://github.com/Sivaramasaran2773/Kidney-Disease-Detection-using-Deep-Learning/assets/96780921/aa337982-91d5-4175-a3c6-9a4ac1cb294d)
+
+
 ## Workflows
 
 1. Update config.yaml
