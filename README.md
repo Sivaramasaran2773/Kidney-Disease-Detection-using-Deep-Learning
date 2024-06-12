@@ -1,5 +1,51 @@
-# Kidney-Disease-Detection-Classification-MLflow-DVC
+# Kidney-Disease-Detection-Classification-MLflow-DVC-AWS-Using-Deep-Learning-Models
+### This repository consists of two main parts. In the first part, we apply deep learning to our classification task using various deep learning models to identify the best-performing model. In the second part, we focus on deploying this deep learning model to the cloud, enabling easy access for everyone. For deployment, we utilize a CI/CD pipeline and an EC2 instance server.
 
+The AWS Cloud Deployment Part was followed from Krish Naik Sir's Github Repository.
+
+# Part-1: Kidney Disease Classification using Deep Learning Architectures
+
+## Dataset Overview:
+https://www.kaggle.com/datasets/nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone
+
+![image](https://github.com/Sivaramasaran2773/Kidney-Disease-Detection-using-Deep-Learning/assets/96780921/eb0a3061-7807-4b22-8607-f03b474a99c0)
+
+## Methodology:
+
+![image](https://github.com/Sivaramasaran2773/Kidney-Disease-Detection-using-Deep-Learning/assets/96780921/d9194f3f-6e95-4777-af0d-1c06428aa0b3)
+
+## Simulation Architecture:
+### Platform & Tools
+
+### Library
+- PyTorch
+
+### Platform
+- Kaggle
+
+### Hardware
+- P100 GPU acceleration
+
+### Hyperparameters
+
+- Optimizer: ADAM
+- Learning Rate: 0.001
+- Batch size: 32
+
+### Training Parameters
+
+- Epochs: 100
+- Dropout Value: 0.5
+
+## Best Model Results:
+Out of the 3 models which have we have Implemented, ResNet18 have achieved an highest accuracy of 99.92%. You can see the Validation Loss and Accuracy plots along with the t-SNE plots below.
+
+![image](https://github.com/Sivaramasaran2773/Kidney-Disease-Detection-using-Deep-Learning/assets/96780921/789b50bc-aee8-4312-a4d9-1289ca30c78a)
+
+![image](https://github.com/Sivaramasaran2773/Kidney-Disease-Detection-using-Deep-Learning/assets/96780921/e3b023fa-3bc0-4f90-814a-06c853d5d066)
+
+
+# Part-2: Deployment in AWS Cloud using CI/CD Pipeline
 ## Workflows
 
 1. Update config.yaml
@@ -46,36 +92,6 @@ Now,
 ```bash
 open up you local host and port
 ```
-
-## MLflow
-
-- [Documentation](https://mlflow.org/docs/latest/index.html)
-
-- [MLflow tutorial](https://youtu.be/qdcHHrsXA48?si=bD5vDS60akNphkem)
-
-##### cmd
-- mlflow ui
-
-### dagshub
-[dagshub](https://dagshub.com/)
-
-MLFLOW_TRACKING_URI=https://dagshub.com/ramasaranmummidi/Kidney-Disease-Detection-using-Deep-Learning.mlflow \
-MLFLOW_TRACKING_USERNAME=ramasaranmummidi \
-MLFLOW_TRACKING_PASSWORD=ff9a10bf90595da939492bc7540ed22bbb7d96f0 \
-python script.py
-
-Run this to export as env variables:
-
-```bash
-
-set MLFLOW_TRACKING_URI=https://dagshub.com/ramasaranmummidi/Kidney-Disease-Detection-using-Deep-Learning.mlflow
-
-set MLFLOW_TRACKING_USERNAME=ramasaranmummidi 
-
-set MLFLOW_TRACKING_PASSWORD=ff9a10bf90595da939492bc7540ed22bbb7d96f0
-
-```
-
 
 ### DVC cmd
 
